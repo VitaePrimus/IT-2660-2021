@@ -67,52 +67,6 @@ public class Main {
 
             System.out.print("Choose a door (r, g, b): ");
         }
-//        // Keeping the choice
-//        int win = 0;
-//        int loss = 0;
-//
-//        for(int i = 0; i < 10000; i++){
-//            chosenDoor = game.chosenDoor();
-//            winningDoor = game.Prize();
-//            loosingDoor = game.openDoor(winningDoor, chosenDoor);
-//            lastDoor = game.lastDoor(loosingDoor, chosenDoor);
-//
-//            if (chosenDoor.equals(winningDoor)) {
-//                //System.out.println("You won!");
-//                win++;
-//            } else {
-//                //System.out.println("You lost!");
-//                loss++;
-//            }
-//
-//        }
-//        System.out.println();
-//        System.out.println("You won " + win + "times and lost " + loss + " times");
-//        System.out.println();
-//
-//        // Changing the door
-//        win = 0;
-//        loss = 0;
-//
-//        for(int i = 0; i < 10000; i++){
-//            chosenDoor = game.chosenDoor();
-//            winningDoor = game.Prize();
-//            loosingDoor = game.openDoor(winningDoor, chosenDoor);
-//            lastDoor = game.lastDoor(loosingDoor, chosenDoor);
-//
-//            chosenDoor = lastDoor;
-//
-//            if (chosenDoor.equals(winningDoor)) {
-//                //System.out.println("You won!");
-//                win++;
-//            } else {
-//                //System.out.println("You lost!");
-//                loss++;
-//            }
-//
-//        }
-//        System.out.println("You won " + win + "times and lost " + loss + " times");
-    }
 
     // Method for player's input (name coule be better)
     public static Door myMethod(){
