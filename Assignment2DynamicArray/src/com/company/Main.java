@@ -5,10 +5,14 @@ public class Main {
     public static void main(String[] args) {
         // Declaring array object
         CartArray cart = new CartArray(2);
+
+        // Adding multiple items
         cart.insert("carrot");
         cart.insert("grapes");
         cart.insert("apple");
         cart.insert("banana");
+
+        // Testing the printing
         cart.printArray();
     }
 }
