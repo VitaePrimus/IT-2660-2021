@@ -18,7 +18,7 @@ public class CartArray {
 
     // Used to add an item at the last position in an array
     public void add(String item){
-        String[] itemsNew = new String[length + 1];     // Creates new array
+        String[] itemsNew = new String[length + 1];         // Creates new array
 
         if(items.length == length){
 
@@ -30,7 +30,7 @@ public class CartArray {
         }
 
         items[length] = item;                               // Adding the item
-        length++;
+        length++;                                           // Increasing the array size index
     }
 
     // Lets the user choose where to add an item and shift others to the right (was harder than I thought)
@@ -69,6 +69,20 @@ public class CartArray {
 
     // Removes an item and shifts the list to the left
     public void remove(int index){
+        if(index < 0 || index > length){    // Do nothing if index is incorrect
+            return;
+        }
+
+        String[] itemsNew = new String[length - 1];     // Creates new array that is smaller
+
+            for(int x = 0; x < length; x++){
+                if(x < (index)) itemsNew[x] = items[x];
+                else itemsNew[x - 1] = items[x];
+            }
+
+            items = itemsNew;
+
+        length--;   // This time decreasing the index of the array size
 
     }
 
