@@ -75,9 +75,9 @@ public class CartArray {
 
         String[] itemsNew = new String[length - 1];     // Creates new array that is smaller
 
-            for(int x = 0; x < length; x++){
-                if(x < (index)) itemsNew[x] = items[x];
-                else itemsNew[x - 1] = items[x];
+            for(int i = 0; i < length; i++){
+                if(i < (index)) itemsNew[i] = items[i];
+                else itemsNew[i - 1] = items[i];
             }
 
             items = itemsNew;
