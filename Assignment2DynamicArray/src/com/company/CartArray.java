@@ -43,12 +43,12 @@ public class CartArray {
 
         if(items.length == length){
 
-            for(int x = 0; x < length; x++){
-                if(x < (index - 1)) itemsNew[x] = items[x];
-                else if(x > (index - 1)) itemsNew[x + 1] = items[x];
+            for(int i = 0; i < length; i++){
+                if(i < (index - 1)) itemsNew[i] = items[i];
+                else if(i > (index - 1)) itemsNew[i + 1] = items[i];
                 else{
-                    itemsNew[x] = item;
-                    itemsNew[x + 1] = items[x];
+                    itemsNew[i] = item;
+                    itemsNew[i + 1] = items[i];
                 }
             }
 
