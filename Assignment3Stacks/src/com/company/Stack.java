@@ -29,7 +29,7 @@ public class Stack {
     public void pop(){
         if(IS_EMPTY()){
             System.out.println("Nothing to remove. Stack is empty.");
-            return;     // Do nothin, just return the message if empty
+            return;     // Do nothing, just return the message if empty
         }
 
         String[] newString = new String[size - 1];      // New smaller array
