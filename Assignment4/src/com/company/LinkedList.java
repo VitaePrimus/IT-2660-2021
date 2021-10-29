@@ -43,6 +43,7 @@ public class LinkedList {
         return -1;
     }
 
+    // Changing with the index
     public void amend(int index, String item){
         int currentIndex = 0;
         LLNode current = head;
@@ -55,6 +56,7 @@ public class LinkedList {
         }
     }
 
+    // Chenging with the value
     public void amend(String oldItem, String item){
         LLNode current = head;
         while(current != null){
@@ -66,34 +68,36 @@ public class LinkedList {
     }
 
     public void remove(int index){
-        int currentIndex = 0;
         LLNode current = head;
         LLNode next = current.getNext();
         LLNode previous = head;
+        int currentIndex = 0;
 
         while(current != null){
             if(currentIndex == index){
-                if(current == previous){
+                if(head == tail){       // Remove if only 1 item
                     head = null;
                     tail = null;
                 }
-                else if(current == head){
-                    current.setNext(null);
-                    current = next;
-                    System.out.println("removed first. New first: " + next.getItem());
+                if(current == head){    // Remove at start
+                    current = null;
+                    head = next;
+                    //System.out.println("removed first. New first: " + next.getItem());            // Used for debugging
                 }
-                else if(current == tail){
+                else if(current == tail){       // Remove at end
+                    tail = previous;
                     previous.setNext(null);
                     current = null;
-                    System.out.println("removed last. Previous item: " + previous.getItem());
+                    //System.out.println("removed last. Previous item: " + previous.getItem());     // Used for debugging
                 }
-                else {
+                else {      // Remove index in the middle
                     current = next;
                     previous.setNext(next);
-                    System.out.println("Item in " + currentIndex + " position in removed.");
+                    //System.out.println("Item in " + currentIndex + " position in removed.");      // Used for debugging
                 }
             }
 
+            // Advancing to the next
             else {
                 previous = current;
                 current = current.getNext();

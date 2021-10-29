@@ -26,7 +26,11 @@ public class Main {
         ll.printList();
 
         ll.remove(0);
-        ll.remove(3);
+        ll.printList();
+
+        ll.remove(2);
+        ll.remove(1);
+        ll.remove(0);
         ll.printList();
     }
 }
