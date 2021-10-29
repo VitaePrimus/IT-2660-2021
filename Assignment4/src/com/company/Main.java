@@ -1,5 +1,15 @@
 package com.company;
 
+/* Created LinkedList -- by Vitaliy Vuychych
+Commands:
+addAtStart - add at the beginning
+addAtEnd - add at the end
+amend - change one item for another (using index or item name)
+remove - remove any index
+index - get the index of an item
+printList - print the list
+ */
+
 public class Main {
 
     public static void main(String[] args) {
