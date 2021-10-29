@@ -67,6 +67,34 @@ public class LinkedList {
         }
     }
 
+    public void add(int index, String item){
+        int currentIndex = 0;
+        LLNode newN = new LLNode(item);
+        LLNode current = head;
+        LLNode previous = head;
+
+        while(current != null){
+            if(currentIndex == index){
+                if(current == head){
+                    addAtStart(item);
+                }
+                else if(current == tail){
+                    addAtEnd(item);
+                }
+                else{
+                    previous.setNext(newN);
+                    newN.setNext(current);
+                    //System.out.println("added at " + currentIndex + " position.");    // Used for debugging
+                }
+            }
+            else{
+                previous = current;
+                current = current.getNext();
+            }
+            currentIndex++;
+        }
+    }
+
     public void remove(int index){
         LLNode current = head;
         LLNode next = current.getNext();

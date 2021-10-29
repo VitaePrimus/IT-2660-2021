@@ -28,9 +28,10 @@ public class Main {
         ll.remove(0);
         ll.printList();
 
-        ll.remove(2);
-        ll.remove(1);
-        ll.remove(0);
+        ll.add(1, "random");
+        ll.add(1,"random before random");
+        ll.add(0, "new head");
+        ll.add(ll.index("four"), "new tail");
         ll.printList();
     }
 }
