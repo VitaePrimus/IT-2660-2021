@@ -33,7 +33,7 @@ public class Main {
         }
 
         // Printing the graph out
-        //g.print();
+        g.print();
 
         // Choosing a random node key to start the search from
         int randomSearch = rng.nextInt(100000);

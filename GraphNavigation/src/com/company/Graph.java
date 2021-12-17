@@ -31,11 +31,9 @@ public class Graph {
     }
 
     // Printing out the graph // Working on it right now, will finish by the end of 12/17
-//    public void print() {
-//        for (int i = 0; i < nodes.size(); i++) {
-//            System.out.println(nodes.p + " connected with " + edges.get(nodes.get(String.valueOf(i))));
-//        }
-//    }
+    public void print() {
+        System.out.println(edges.entrySet());
+    }
 
     // Some getters
     public HashMap<String, Node> getNodes() { return nodes; }
